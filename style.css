@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body{
+    padding-left: 50px;
+    padding-right: 50px;
+    animation: backgroundpiru 10s infinite;
+}
+@keyframes backgroundpiru{
+    0%{
+        background-color:#A020F0;
+    }
+    25%{
+        background-color: 	#EE82EE;
+    }
+    50%{
+        background-color: #FF00FF;
+    }
+    75%{
+        background-color: 	#00FFFF;
+    }
+    100%{
+        background-color: #A020F0;;
+    }
+}
+
+img{
+    float: right;
+    border-radius: 10px;
+    transform:translateY(-6%);  /* ajusta a posição horizontal */
+}
+
+.titulo{
+    background-color: black; 
+    text-align: center;
+    color: #fff;
+    height: 50px;
+    font-size: 40px;
+}
+
+
+.generico{
+    color: black; 
+}
+
+
+.gallery{
+    position: absolute;
+    display: flex;
+    width: 180vh;           /* configs gerais da galleria */
+    height: 40vmin;
+    gap: 5px;
+    
+}
+
+.gallery img{
+    height: 140%;
+    flex: 1;
+    object-fit: cover;
+    overflow: hidden;       /* configs das fotos da galleria */
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.gallery img:hover{
+    flex: 4;                /* hover ("animação") da galeria */
+}
+
+.primeiro{
+    color:black;
+}
+.primeiro span{
+    padding-left: 350px;
+}
+
+
+
+
+        /* O CODIGO ABAIXO FOI PEGO NA NET E MODIFICADO, BJOS */
+                :root{
+                    font-family: Open Sans, sans-serif;
+                    font-size: 15px;
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                }
+
+                *{
+                    text-decoration: none;
+                    color:black;
+                    list-style: none;
+                    box-sizing: border-box;
+                    font-family: Open Sans, sans-serif;
+                }
+
+                .menu{
+                    width: 300px;
+                    height: auto;
+                    background: #FFF;
+                    border-radius: 8px;
+                    overflow: hidden;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+                }
+
+                .menu .btn{
+                    display:block;
+                    padding: 1rem;
+                    border-bottom: solid 1px #1b1b2f;
+                    border-top: solid 1px #1f4068;
+                    position: relative;
+                }
+
+                .menu .submenu {
+                    background: pink;
+                    overflow: hidden;
+                    max-height: 0;
+                    transition: max-height .8s ease-out;
+                }
+
+                .menu .submenu a{
+                    display:block;
+                    padding: 1rem;
+                    position: relative;
+                }
+
+                .menu .submenu a::before{
+                    content:'';
+                    display:block;
+                    position: absolute;
+                    top:0;
+                    left:0;
+                    height: 100%;
+                    width: 5px;
+                    background: white;
+                    opacity: 0;
+                    transition: all .5s;
+                }
+
+                .menu .submenu a:hover{
+                    padding-left: calc(1rem + 5px);
+                }
+
+                .menu .submenu a:hover::before{
+                    opacity: 1;
+                }
+
+                .item:target .submenu{
+                    max-height: 20rem;
+                }
